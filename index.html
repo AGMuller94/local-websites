@@ -161,6 +161,34 @@ height:200px;
 object-fit:cover;
 }
 
+/* REVIEWS */
+
+.reviews{
+background:#ffffff;
+padding:80px 10%;
+text-align:center;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.review-card{
+background:#f9f9f9;
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.review-stars{
+color:#f4b400;
+font-size:20px;
+margin-bottom:10px;
+}
+
 /* CONTACT */
 
 .contact{
@@ -169,8 +197,27 @@ color:white;
 text-align:center;
 }
 
-.contact p{
-margin:10px 0;
+/* SOCIAL */
+
+.social{
+text-align:center;
+margin-top:30px;
+}
+
+.social a{
+display:inline-block;
+margin:10px;
+padding:12px 20px;
+background:#e67e22;
+color:white;
+text-decoration:none;
+border-radius:25px;
+font-weight:600;
+transition:0.3s;
+}
+
+.social a:hover{
+background:#d35400;
 }
 
 /* FOOTER */
@@ -205,6 +252,7 @@ grid-column:span 1;
 <a href="#about">About</a>
 <a href="#menu">Menu</a>
 <a href="#gallery">Gallery</a>
+<a href="#reviews">Reviews</a>
 <a href="#contact">Visit</a>
 </nav>
 
@@ -290,6 +338,34 @@ Located right on the beachfront in Hibberdene, The Jolly Roger Fun Pub & Grub is
 
 </section>
 
+<section id="reviews" class="reviews">
+
+<h2>What Our Guests Say</h2>
+
+<div class="review-grid">
+
+<div class="review-card">
+<div class="review-stars">★★★★★</div>
+<p>Great food and amazing ocean views. The fish and chips are absolutely fantastic.</p>
+<strong>– Google Review</strong>
+</div>
+
+<div class="review-card">
+<div class="review-stars">★★★★★</div>
+<p>Lovely relaxed beach atmosphere. Perfect place to grab a drink and watch the sunset.</p>
+<strong>– Google Review</strong>
+</div>
+
+<div class="review-card">
+<div class="review-stars">★★★★★</div>
+<p>Friendly staff and great portions. A must-visit spot when in Hibberdene.</p>
+<strong>– Google Review</strong>
+</div>
+
+</div>
+
+</section>
+
 <section id="contact" class="contact">
 
 <h2>Visit Us</h2>
@@ -304,6 +380,18 @@ Located right on the beachfront in Hibberdene, The Jolly Roger Fun Pub & Grub is
 src="https://maps.google.com/maps?q=hibberdene%20main%20beach&t=&z=13&ie=UTF8&iwloc=&output=embed"
 width="100%" height="300" style="border:0;">
 </iframe>
+
+<div class="social">
+
+<a href="https://web.facebook.com/TheJollyRogerHibberdene?mibextid=LQQJ4d&_rdc=1&_rdr#" target="_blank">
+Facebook
+</a>
+
+<a href="https://www.instagram.com/thejollyrogerhibberdene/" target="_blank">
+Instagram
+</a>
+
+</div>
 
 </section>
 
