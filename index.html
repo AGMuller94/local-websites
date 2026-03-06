@@ -22,7 +22,7 @@ color:#222;
 line-height:1.6;
 }
 
-/* HERO SECTION */
+/* HERO */
 
 header{
 background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url("./photo1.png");
@@ -41,18 +41,18 @@ padding:20px;
 
 header img{
 max-width:260px;
-margin-bottom:20px;
+margin-bottom:15px;
 }
 
 header h1{
 font-family:'Cinzel',serif;
 font-size:3rem;
 letter-spacing:2px;
+margin-bottom:10px;
 }
 
 header p{
 font-size:1.2rem;
-margin-top:15px;
 max-width:600px;
 }
 
@@ -92,21 +92,34 @@ nav a{
 color:white;
 text-decoration:none;
 font-weight:600;
+transition:0.2s;
+}
+
+nav a:hover{
+color:#e67e22;
 }
 
 /* SECTIONS */
 
 section{
-padding:80px 10%;
+padding:90px 10%;
 }
 
 h2{
 font-family:'Cinzel',serif;
-margin-bottom:20px;
+margin-bottom:25px;
 font-size:2.2rem;
+text-align:center;
 }
 
 /* MENU GRID */
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+margin-top:30px;
+}
 
 .menu-item{
 background:white;
@@ -137,7 +150,7 @@ border:2px solid #e67e22;
 .gallery{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
+gap:20px;
 margin-top:30px;
 }
 
@@ -164,7 +177,7 @@ margin:10px 0;
 
 footer{
 text-align:center;
-padding:20px;
+padding:25px;
 background:#08111a;
 color:white;
 }
@@ -175,6 +188,10 @@ color:white;
 
 header h1{
 font-size:2rem;
+}
+
+.featured{
+grid-column:span 1;
 }
 
 }
@@ -207,7 +224,7 @@ font-size:2rem;
 
 <h2>About Us</h2>
 
-<p>
+<p style="max-width:800px;margin:auto;text-align:center;">
 Located right on the beachfront in Hibberdene, The Jolly Roger Fun Pub & Grub is a relaxed coastal restaurant where locals and holidaymakers gather for great food and ocean views. Enjoy burgers, pizza, seafood, and refreshing drinks while the kids enjoy putt-putt and waterslides.
 </p>
 
@@ -215,7 +232,7 @@ Located right on the beachfront in Hibberdene, The Jolly Roger Fun Pub & Grub is
 
 <section id="menu">
 
-<h2 style="text-align:center;">Captain's Favourites</h2>
+<h2>Captain's Favourites</h2>
 
 <div class="menu-grid">
 
@@ -264,10 +281,10 @@ Located right on the beachfront in Hibberdene, The Jolly Roger Fun Pub & Grub is
 
 <div class="gallery">
 
-<img src="./photo2.png" alt="Photo 2">
-<img src="./photo3.png" alt="Photo 3">
-<img src="./photo4.png" alt="Photo 4">
-<img src="./photo5.png" alt="Photo 5">
+<img src="./photo2.png" alt="Restaurant Photo">
+<img src="./photo3.png" alt="Food Photo">
+<img src="./photo4.png" alt="Restaurant Photo">
+<img src="./photo5.png" alt="Food Photo">
 
 </div>
 
@@ -299,11 +316,13 @@ width="100%" height="300" style="border:0;">
 <script>
 
 function scrollToMenu(){
-document.getElementById("menu").scrollIntoView({behavior:"smooth"});
+const menuSection = document.getElementById("menu");
+if(menuSection){
+menuSection.scrollIntoView({behavior:"smooth"});
+}
 }
 
 </script>
 
 </body>
 </html>
-
